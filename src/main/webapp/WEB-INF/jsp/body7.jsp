@@ -12,10 +12,10 @@
     </div >
     <div style="background-color: #ffffff;border: 1px solid #999999;width: 400px;height: 350px;display: flex;justify-content: center">
 
-        <form action="/register" method="post">
+        <form action="/regist/mail" method="post">
             <div style="color: #29b078;margin: 10px 10px;text-align: center" >
-                <h2>手机注册</h2>
-                <a href="/regist/mail">使用用户邮箱注册</a></div>
+                <h2>邮箱注册</h2>
+                <a href="/regist/mobile">使用用户手机注册</a></div>
             <div style="margin-bottom: 20px;margin-top: 20px">
                 <input style="height: 50px;width: 250px;font-size: large" type="text" name="username" placeholder="请输入注册用户名">
             </div>
@@ -23,15 +23,14 @@
                 <input style="height: 50px;width: 250px;font-size: large" type="password" name="password" placeholder="请输入登陆密码">
             </div>
             <div style="margin-bottom: 20px">
-            <input id="tel" style="height: 50px;width: 250px;font-size: large" type="text" name="mobile" placeholder="请输入手机号码">
+                <input id="mail" style="height: 50px;width: 250px;font-size: large" type="text" name="email" placeholder="请输入邮箱账户">
                 <button onclick="x()"  >点击发送验证码</button>
-
             </div>
             <div style="margin-bottom: 20px">
-            <input style="height: 50px;width: 250px;font-size: large" type="text" name="vcode" placeholder="请输入验证码">
+                <input style="height: 50px;width: 250px;font-size: large" type="text" name="vcode" placeholder="请输入验证码">
             </div>
             <div style="margin: 10px 0 0 10px;"><strong>${msg}</strong></div>
-            <div style="margin: 10px 0 0 10px;"><strong>${mobile}</strong></div>
+            <div style="margin: 10px 0 0 10px;"><strong>${message}</strong></div>
             <div style="margin-top: 20px">
                 <!--<input  type="submit" value="登陆" style="width: 120px;height: ">-->
                 <button style="width: 250px;height: 50px;background-color: #29b078;color: white;font-size: large" type="submit">
@@ -45,8 +44,8 @@
 <script>
     function x() {
         var  xmlhttp=new XMLHttpRequest()
-        var tel = document.getElementById("tel").value
-        var data = 'phoneNumbers='+tel
+        var mail = document.getElementById("mail").value
+        var data = 'email='+mail
         console.log(data)
         xmlhttp.onreadystatechange=function()
         {
@@ -55,8 +54,11 @@
                 console.log('okk')
             }
         }
-        xmlhttp.open("POST","${pageContext.servletContext.contextPath}/sendvcode",true);
+        xmlhttp.open("POST","${pageContext.servletContext.contextPath}/email",true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send(data);
     }
+
+
+
 </script>

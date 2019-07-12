@@ -1,9 +1,6 @@
 package jnshu.tiles.entity;
 
-import java.io.Serializable;
-
-public class Student implements Serializable {
-    private static final long serialVersionUID = -7127197430934181812L;
+public class Student {
     private Long id;
 
     private String img;

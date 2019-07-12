@@ -3,11 +3,9 @@ package jnshu.tiles.dao;
 import jnshu.tiles.entity.User;
 import jnshu.tiles.entity.UserExample;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
 public interface UserMapper {
     long countByExample(UserExample example);
 

@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <body>
 <div class="carousel-inner">
-    <img src="http://140.143.170.92:8090/ROOT/image/3/1.png">
+    <img src="../image/3/1.png">
     <div class="three-font1">内部直推</div>
     <div class="three-font2-img"></div>
     <div class="three-font3">快人一步</div>

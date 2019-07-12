@@ -1,9 +1,6 @@
 package jnshu.tiles.entity;
 
-import java.io.Serializable;
-
-public class User  implements Serializable {
-    private static final long serialVersionUID = 8551366197255626464L;
+public class User {
     private Long id;
 
     private String username;
@@ -17,6 +14,10 @@ public class User  implements Serializable {
     private Long sessionId;
 
     private Long lastLoginTime;
+
+    private Long mobile;
+
+    private String mailbox;
 
     public Long getId() {
         return id;
@@ -72,5 +73,21 @@ public class User  implements Serializable {
 
     public void setLastLoginTime(Long lastLoginTime) {
         this.lastLoginTime = lastLoginTime;
+    }
+
+    public Long getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(Long mobile) {
+        this.mobile = mobile;
+    }
+
+    public String getMailbox() {
+        return mailbox;
+    }
+
+    public void setMailbox(String mailbox) {
+        this.mailbox = mailbox;
     }
 }

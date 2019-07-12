@@ -16,13 +16,13 @@
     </ul>
     <div style="margin-bottom: 116px;" class="carousel-inner">
         <div class="carousel-item active">
-            <img src="http://140.143.170.92:8090/ROOT/image/1/three1.png">
+            <img src="../image/1/three1.png">
         </div>
         <div class="carousel-item">
-            <img src="http://140.143.170.92:8090/ROOT/image/1/three2.png">
+            <img src="../image/1/three2.png">
         </div>
         <div class="carousel-item">
-            <img src="http://140.143.170.92:8090/ROOT/image/1/three3.png">
+            <img src="../image/1/three3.png">
         </div>
     </div>
     <a class="carousel-control-prev" href="#three" data-slide="prev">

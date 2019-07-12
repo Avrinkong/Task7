@@ -19,9 +19,12 @@
             <list>
                 <value>classpath:jdbc.properties</value>
                 <value>classpath:redis.properties</value>
+                <value>classpath:mobile.properties</value>
+                <value>classpath:sendClound.properties</value>
             </list>
         </property>
-
+        <!--properties文件默认读取编码，不然会导致乱码-->
+        <property name="fileEncoding" value="UTF-8"/>
     </bean>
 
 
@@ -41,7 +44,7 @@
     -->
 
     <!-- 配置数据源 -->
-    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
           destroy-method="close">
         <property name="driverClassName" value="${driverClasss}"/>
         <property name="url" value="${jdbcUrl}"/>
@@ -187,7 +190,6 @@
     <!-- (事务管理)transaction manager, use JtaTransactionManager for global tx -->
     <tx:annotation-driven transaction-manager="transactionManager"/>
 
-    <context:component-scan base-package="jnshu.tiles.utils"/>
     <aop:aspectj-autoproxy>
     </aop:aspectj-autoproxy>
 
@@ -290,4 +292,27 @@
 
     <!-- redis config end -->
 
+
+    <!--短信发送配置-->
+    <bean id="sendM" class="jnshu.tiles.entity.SendM" >
+        <property name="accessKeyId" value="${mobile.accessKeyId}"/>
+        <property name="singName" value="${mobile.singname}"/>
+        <property name="templateCode" value="${mobile.templatecode}"/>
+        <property name="secret" value="${mobile.secret}"/>
+        <property name="bucketName" value="${mobule.bucketName}"/>
+        <property name="endpoint" value="${mobule.endpoint}"/>
+        <!-- <constructor-arg  name="accessKeyId" value="${mobile.accessKeyId}"/>
+         <constructor-arg  name="singName" value="${mobile.singname}"/>
+         <constructor-arg  name="templateCode" value="${mobile.templatecode}"/>
+         <constructor-arg  name="secret" value="${mobile.secret}"/>-->
+    </bean>
+
+    <!--sendcloud邮件发送配置-->
+    <bean id="sendCloud" class="jnshu.tiles.entity.SendCloud">
+        <property name="apiUser" value="${apiUser}"/>
+        <property name="apiKey" value="${apiKey}"/>
+        <property name="rcpt_to" value="${rcpt_to}"/>
+        <property name="subject" value="${subject}"/>
+        <property name="html" value="${html}"/>
+    </bean>
 </beans>

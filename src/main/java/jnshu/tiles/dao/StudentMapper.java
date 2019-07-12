@@ -1,10 +1,9 @@
 package jnshu.tiles.dao;
 
+import java.util.List;
 import jnshu.tiles.entity.Student;
 import jnshu.tiles.entity.StudentExample;
 import org.apache.ibatis.annotations.Param;
-
-import java.util.List;
 
 public interface StudentMapper {
     long countByExample(StudentExample example);

@@ -1,11 +1,9 @@
 package jnshu.tiles.entity;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserExample  implements Serializable {
-    private static final long serialVersionUID = 1209217646188766276L;
+public class UserExample {
     protected String orderByClause;
 
     protected boolean distinct;
@@ -543,6 +541,136 @@ public class UserExample  implements Serializable {
 
         public Criteria andLastLoginTimeNotBetween(Long value1, Long value2) {
             addCriterion("last_login_time not between", value1, value2, "lastLoginTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andMobileIsNull() {
+            addCriterion("mobile is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMobileIsNotNull() {
+            addCriterion("mobile is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMobileEqualTo(Long value) {
+            addCriterion("mobile =", value, "mobile");
+            return (Criteria) this;
+        }
+
+        public Criteria andMobileNotEqualTo(Long value) {
+            addCriterion("mobile <>", value, "mobile");
+            return (Criteria) this;
+        }
+
+        public Criteria andMobileGreaterThan(Long value) {
+            addCriterion("mobile >", value, "mobile");
+            return (Criteria) this;
+        }
+
+        public Criteria andMobileGreaterThanOrEqualTo(Long value) {
+            addCriterion("mobile >=", value, "mobile");
+            return (Criteria) this;
+        }
+
+        public Criteria andMobileLessThan(Long value) {
+            addCriterion("mobile <", value, "mobile");
+            return (Criteria) this;
+        }
+
+        public Criteria andMobileLessThanOrEqualTo(Long value) {
+            addCriterion("mobile <=", value, "mobile");
+            return (Criteria) this;
+        }
+
+        public Criteria andMobileIn(List<Long> values) {
+            addCriterion("mobile in", values, "mobile");
+            return (Criteria) this;
+        }
+
+        public Criteria andMobileNotIn(List<Long> values) {
+            addCriterion("mobile not in", values, "mobile");
+            return (Criteria) this;
+        }
+
+        public Criteria andMobileBetween(Long value1, Long value2) {
+            addCriterion("mobile between", value1, value2, "mobile");
+            return (Criteria) this;
+        }
+
+        public Criteria andMobileNotBetween(Long value1, Long value2) {
+            addCriterion("mobile not between", value1, value2, "mobile");
+            return (Criteria) this;
+        }
+
+        public Criteria andMailboxIsNull() {
+            addCriterion("mailbox is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMailboxIsNotNull() {
+            addCriterion("mailbox is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMailboxEqualTo(String value) {
+            addCriterion("mailbox =", value, "mailbox");
+            return (Criteria) this;
+        }
+
+        public Criteria andMailboxNotEqualTo(String value) {
+            addCriterion("mailbox <>", value, "mailbox");
+            return (Criteria) this;
+        }
+
+        public Criteria andMailboxGreaterThan(String value) {
+            addCriterion("mailbox >", value, "mailbox");
+            return (Criteria) this;
+        }
+
+        public Criteria andMailboxGreaterThanOrEqualTo(String value) {
+            addCriterion("mailbox >=", value, "mailbox");
+            return (Criteria) this;
+        }
+
+        public Criteria andMailboxLessThan(String value) {
+            addCriterion("mailbox <", value, "mailbox");
+            return (Criteria) this;
+        }
+
+        public Criteria andMailboxLessThanOrEqualTo(String value) {
+            addCriterion("mailbox <=", value, "mailbox");
+            return (Criteria) this;
+        }
+
+        public Criteria andMailboxLike(String value) {
+            addCriterion("mailbox like", value, "mailbox");
+            return (Criteria) this;
+        }
+
+        public Criteria andMailboxNotLike(String value) {
+            addCriterion("mailbox not like", value, "mailbox");
+            return (Criteria) this;
+        }
+
+        public Criteria andMailboxIn(List<String> values) {
+            addCriterion("mailbox in", values, "mailbox");
+            return (Criteria) this;
+        }
+
+        public Criteria andMailboxNotIn(List<String> values) {
+            addCriterion("mailbox not in", values, "mailbox");
+            return (Criteria) this;
+        }
+
+        public Criteria andMailboxBetween(String value1, String value2) {
+            addCriterion("mailbox between", value1, value2, "mailbox");
+            return (Criteria) this;
+        }
+
+        public Criteria andMailboxNotBetween(String value1, String value2) {
+            addCriterion("mailbox not between", value1, value2, "mailbox");
             return (Criteria) this;
         }
     }

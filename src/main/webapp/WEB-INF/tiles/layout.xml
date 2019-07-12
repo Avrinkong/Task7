@@ -42,6 +42,11 @@
         <put-attribute name="header" value="/WEB-INF/jsp/head1.jsp" />
         <put-attribute name="body" value="/WEB-INF/jsp/body6.jsp" />
     </definition>
+
+    <definition name="myView7" extends="layout">
+        <put-attribute name="header" value="/WEB-INF/jsp/head1.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/body7.jsp" />
+    </definition>
     <!--项目-->
     <!-- 项目 -->
     <definition name="left" template="/WEB-INF/tiles/leftLayout.jsp">
